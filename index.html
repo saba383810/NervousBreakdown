@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神経衰弱ゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>神経衰弱</h1>
+        <div class="game-info">
+            <div class="info-item">
+                <span class="info-label">残りカード</span>
+                <span id="remaining-cards" class="info-value">16</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">試行回数</span>
+                <span id="attempts" class="info-value">0</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">経過時間</span>
+                <span id="timer" class="info-value">00:00</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">スコア</span>
+                <span id="score" class="info-value">0</span>
+            </div>
+        </div>
+        <div class="game-status" id="game-status">ゲームを開始してください</div>
+        <div id="game-board"></div>
+        <div class="button-group">
+            <button id="restart-button" class="game-button">ゲームをリスタート</button>
+            <button id="new-game-button" class="game-button">新しいゲーム</button>
+        </div>
+        
+        <div class="ranking-section">
+            <h2>ランキング</h2>
+            <div class="ranking-tabs">
+                <button class="ranking-tab active" data-tab="daily">今日のランキング</button>
+                <button class="ranking-tab" data-tab="all">全期間ランキング</button>
+            </div>
+            <div class="ranking-list" id="ranking-list">
+                <!-- ランキングはJavaScriptで動的に生成 -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
